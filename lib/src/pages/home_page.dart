@@ -22,6 +22,7 @@ class HomePage extends StatelessWidget{
           ],
           )
       ),
+      //floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,//cambios de ubicación del boton
       floatingActionButton: FloatingActionButton(
         child: Icon( Icons.add ),//docs: https://material.io/resources/icons/?style=baseline
         onPressed: () {
