@@ -30,20 +30,29 @@ class _ContadorPageState extends State<ContadorPage> {//Se le añade el guion al
           ],
           )
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon( Icons.add ),//docs: https://material.io/resources/icons/?style=baseline
-        onPressed: () {
-
-          //print('Hola Mundo');
-
-          setState(() {
-            _conteo++;
-          });
-
-
-        }, //setted on null its equals to disabled = true
-        ),
+      floatingActionButton: _crearBotones(),
     ); 
+  }
+
+
+  Widget _crearBotones() {
+
+    return Row(//docs: https://api.flutter.dev/flutter/widgets/Row-class.html
+      mainAxisAlignment: MainAxisAlignment.end,//Alinea de start izquierda a end derecha
+      children: <Widget>[
+        SizedBox( width: 30.0 ),
+        FloatingActionButton( child: Icon(Icons.exposure_zero ), onPressed: null ),
+        Expanded(child: SizedBox()),
+        FloatingActionButton( child: Icon(Icons.remove ), onPressed: null ),
+        SizedBox( width: 5.0 ),
+        FloatingActionButton( child: Icon(Icons.add ), onPressed: null ),
+      ],
+    ); 
+    
+    
+    
+    
+
   }
 
 }
