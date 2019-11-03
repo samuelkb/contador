@@ -22,6 +22,14 @@ class HomePage extends StatelessWidget{
           ],
           )
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon( Icons.add ),//docs: https://material.io/resources/icons/?style=baseline
+        onPressed: () {
+
+          print('Hola Mundo');
+
+        }, //setted on null its equals to disabled = true
+        ),
     ); 
   }
 
