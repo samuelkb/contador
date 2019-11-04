@@ -41,19 +41,28 @@ class _ContadorPageState extends State<ContadorPage> {//Se le añade el guion al
       mainAxisAlignment: MainAxisAlignment.end,//Alinea de start izquierda a end derecha
       children: <Widget>[
         SizedBox( width: 30.0 ),
-        FloatingActionButton( child: Icon(Icons.exposure_zero ), onPressed: null ),
+        FloatingActionButton( child: Icon(Icons.exposure_zero ), onPressed: _reset ),
         Expanded(child: SizedBox()),
-        FloatingActionButton( child: Icon(Icons.remove ), onPressed: null ),
+        FloatingActionButton( child: Icon(Icons.remove ), onPressed: _sustraer ),
         SizedBox( width: 5.0 ),
-        FloatingActionButton( child: Icon(Icons.add ), onPressed: null ),
+        FloatingActionButton( child: Icon(Icons.add ), onPressed: _agregar ),
       ],
     ); 
     
-    
-    
-    
-
   }
+
+  void _agregar() {
+      setState(() => _conteo++ );
+    }
+
+  void _sustraer() {
+    setState(() => _conteo-- );
+  }
+
+  void _reset() {
+    setState(() => _conteo=0 );
+  }
+
 
 }
 
